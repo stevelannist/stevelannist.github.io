@@ -13,7 +13,7 @@
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="Steve Lannist">
+<meta property="article:author" content="codepig">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -46,7 +46,7 @@
 			<img src="" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">Steve Lannist</a></h1>
+		  <h1 class="header-author"><a href="/">codepig</a></h1>
 		</hgroup>
 		
 
@@ -104,7 +104,7 @@
 				<img src="" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">Steve Lannist</h1>
+			  <h1 class="header-author js-header-author">codepig</h1>
 			</hgroup>
 			
 			
@@ -151,6 +151,846 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-java初入门" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/22/java%E5%88%9D%E5%85%A5%E9%97%A8/">java初入门</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/22/java%E5%88%9D%E5%85%A5%E9%97%A8/" class="archive-article-date">
+  	<time datetime="2020-02-22T01:06:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一次编写，到处运行"><a href="#一次编写，到处运行" class="headerlink" title="一次编写，到处运行"></a>一次编写，到处运行</h3><p>在windows linux macOS 都只要编译一次 考的是虚拟机jvm </p>
+<ul>
+<li><p>jvm for windows </p>
+</li>
+<li><p>jvm for linux</p>
+</li>
+<li><p>jvm for macos</p>
+</li>
+</ul>
+<p>javac Hello.java  // 编译<br>java Hello // 运行</p>
+<h3 id="源文件文件名必须和文件名相统一"><a href="#源文件文件名必须和文件名相统一" class="headerlink" title="源文件文件名必须和文件名相统一"></a>源文件文件名必须和文件名相统一</h3><img src="/images/image-20200222101259822.png" alt="image-20200222101259822" style="zoom:33%;" />
+
+<h3 id="类名一般都首字母大写"><a href="#类名一般都首字母大写" class="headerlink" title="类名一般都首字母大写"></a>类名一般都首字母大写</h3><h3 id="字节码文件-class"><a href="#字节码文件-class" class="headerlink" title="字节码文件 .class"></a>字节码文件 .class</h3><h3 id="性能并没有C和C-快-因为虚拟机的过程"><a href="#性能并没有C和C-快-因为虚拟机的过程" class="headerlink" title="性能并没有C和C++快 因为虚拟机的过程"></a>性能并没有C和C++快 因为虚拟机的过程</h3><h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p><code>//</code> 单行注释<code>/* */</code>多行注释</p>
+<h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><p>规则：</p>
+<ol start="4">
+<li><p>由字母，数字，下划线，美元符号组成</p>
+</li>
+<li><p>由字母，下划线，美元符号开头</p>
+</li>
+<li><p>严格区分大写 无长度限制</p>
+</li>
+<li><p>不能以数字开头</p>
+</li>
+</ol>
+<p><strong>注意</strong>：不能命名关键字和保留字</p>
+<p>关键字：系统已经使用的字符</p>
+<p>保留字：系统预留给自己使用的字符<img src="/images/image-20200222103702058.png" alt="image-20200222103702058" style="zoom:%;" /></p>
+<h4 id="规范"><a href="#规范" class="headerlink" title="规范"></a>规范</h4><ul>
+<li>标识符一般要见名知意</li>
+<li>类名首字母大写 </li>
+<li>变量名和方法名首字母小写，后面驼峰式命名</li>
+</ul>
+<p><img src="/images/image-20200222104200634.png" alt="image-20200222104200634"></p>
+<p>可以把变量理解为容器-&gt;里面装的是数据</p>
+<p>声明变量格式：<code>数据类型 变量名 = 值</code></p>
+<p>java里有两种数据类型 1. 基本数据类型 2.引用数据类型</p>
+<p>基本数据类型： 八大基本数据类型</p>
+<ul>
+<li>一个（byte）字节 <strong>8bit</strong> 可以描述256种状态：首位表示符号 -0代表-12</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>字节数</th>
+<th>取值</th>
+<th>包装类</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>byte</td>
+<td>1</td>
+<td>-2^7 —&gt; 2^7-1</td>
+<td>Byte</td>
+</tr>
+<tr>
+<td>short</td>
+<td>2</td>
+<td>-2^15  –&gt;2^15-1</td>
+<td>Short</td>
+</tr>
+<tr>
+<td>int(整数型)</td>
+<td>4</td>
+<td>-2^31  –&gt;2^31-1</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>long(长整型)</td>
+<td>8</td>
+<td>-2^63  –&gt;2^63-1</td>
+<td>Long</td>
+</tr>
+</tbody></table>
+<p>java默认整数都是int型</p>
+<hr>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>字节数</th>
+<th>取值</th>
+<th>包装类</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>float(浮点型)</td>
+<td>4</td>
+<td></td>
+<td>Float</td>
+</tr>
+<tr>
+<td>double</td>
+<td>8</td>
+<td></td>
+<td>Double</td>
+</tr>
+</tbody></table>
+<p>java默认小数是double型</p>
+<p>不能以整数的取值范围来推导</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/22/java%E5%88%9D%E5%85%A5%E9%97%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-matlab学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/21/matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">matlab学习笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/21/matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+  	<time datetime="2020-02-21T06:44:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="matlab的搜索路径"><a href="#matlab的搜索路径" class="headerlink" title="matlab的搜索路径"></a>matlab的搜索路径</h1><p><img src="/images/image-20200221145519935.png" alt="image-20200221145519935"></p>
+<p><img src="/images/image-20200221145855804.png" alt="image-20200221145855804" style="zoom:30%;" />如图 变量名优先</p>
+<p><strong><em>设置变量名时别使用matlab变量函数名</em></strong></p>
+<h2 id="如何设置文件搜素路径"><a href="#如何设置文件搜素路径" class="headerlink" title="如何设置文件搜素路径"></a>如何设置文件搜素路径</h2><ol>
+<li><p><code>path(path,‘路径’)</code></p>
+</li>
+<li><p>工作区中设置路径</p>
+</li>
+</ol>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><img src="/images/image-20200221154817786.png" alt="image-20200221154817786" style="zoom：0%;" />
+
+<ul>
+<li><p>int8()`数据类型转换为带符号8进制整数</p>
+</li>
+<li><p><code>uint8()</code>转换为不带符号8进制整数</p>
+</li>
+</ul>
+<h3 id="整数数据类型范围"><a href="#整数数据类型范围" class="headerlink" title="整数数据类型范围"></a>整数数据类型<strong><em>范围</em></strong></h3><p><img src="/images/image-20200221160936454.png" alt="image-20200221160936454" style="zoom:33%;" /> <code>int8()</code>带符号取值[-127,127]</p>
+<p><code>uint8()</code>不带符号取值[0,255]</p>
+<p><img src="/images/image-20200221151414967.png" alt="image-20200221151414967"></p>
+<p><code>class()</code>可以判断数据的数据类型</p>
+<p><img src="/images/image-20200221151711028.png" alt="image-20200221151711028"></p>
+<p><code>format 格式符</code>只改变输出数据格式不改变计算</p>
+<p><img src="/images/image-20200221151926923.png" alt="image-20200221151926923" style="zoom:33%;" /><img src="/images/image-20200221152046827.png" alt="image-20200221152046827" style="zoom:33%;" /></p>
+<p><code>sind(90)</code>=<code>sin(pi/2)</code></p>
+<p><code>abs()</code>求实数绝对值 复数模 字母的Ascll值</p>
+<h3 id="取整和求余函数"><a href="#取整和求余函数" class="headerlink" title="取整和求余函数"></a>取整和求余函数</h3><img src="/images/image-20200221152509658.png" alt="image-20200221152509658" style="zoom:33%;" />
+
+<p>求余函数<code>rem(m,10)</code> 或者<code>mod(m,100)</code></p>
+<p><code>isprime(n)</code>n是素数返回1，否则返回0</p>
+<p><code>find()</code> returns a vector containing the linear indices(数组序号) of each nonzero element in array X</p>
+<p><code>sqrt()</code>求平方值</p>
+<table>
+<thead>
+<tr>
+<th align="center">变量名</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>who</code></td>
+<td align="center">查看驻留变量名</td>
+</tr>
+<tr>
+<td align="center"><code>whos</code></td>
+<td align="center">查看驻留变量名的值</td>
+</tr>
+<tr>
+<td align="center"><code>save mat文件名 变量名</code></td>
+<td align="center">创建内存变量文件</td>
+</tr>
+<tr>
+<td align="center"><code>load mat文件名 变量名</code></td>
+<td align="center">装入内存变量文件</td>
+</tr>
+<tr>
+<td align="center"><code>linspace(a,b,n)</code></td>
+<td align="center"><img src="/images/image-20200221170137571.png" alt="image-20200221170137571" style="zoom:25%;" /></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p><strong><em>内存变量文件</em></strong></p>
+<p>  用于保存matlab工作区变量的文件叫内存变量文件 拓展名为.mat 也叫mat文件</p>
+<h3 id="矩阵的建立"><a href="#矩阵的建立" class="headerlink" title="矩阵的建立"></a>矩阵的建立</h3><p>1. </p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">matlab</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/21/matlab%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-处理macos划词加不上去的问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/13/%E5%A4%84%E7%90%86macos%E5%88%92%E8%AF%8D%E5%8A%A0%E4%B8%8D%E4%B8%8A%E5%8E%BB%E7%9A%84%E9%97%AE%E9%A2%98/">处理macos划词加不上去的问题</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/13/%E5%A4%84%E7%90%86macos%E5%88%92%E8%AF%8D%E5%8A%A0%E4%B8%8D%E4%B8%8A%E5%8E%BB%E7%9A%84%E9%97%AE%E9%A2%98/" class="archive-article-date">
+  	<time datetime="2020-02-13T03:29:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="../images/image-20200213114240806.png" alt="image-20200213114240806"></p>
+<h1 id="缘起"><a href="#缘起" class="headerlink" title="缘起"></a>缘起</h1><p>macOS的后台冷却机制导致ankiconnect无法连接 +号一直是灰的</p>
+<h1 id="处理方法"><a href="#处理方法" class="headerlink" title="处理方法"></a>处理方法</h1><ol>
+<li><p>打开终端</p>
+</li>
+<li><p>输入以下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">defaults write net.ankiweb.dtop NSAppSleepDisabled -bool true</span><br><span class="line">defaults write net.ichi2.anki NSAppSleepDisabled -bool true</span><br><span class="line">defaults write org.qt-project.Qt.QtWebEngineCore NSAppSleepDisabled -bool true</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重启anki</p>
+</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">anki</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/13/%E5%A4%84%E7%90%86macos%E5%88%92%E8%AF%8D%E5%8A%A0%E4%B8%8D%E4%B8%8A%E5%8E%BB%E7%9A%84%E9%97%AE%E9%A2%98/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-test" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/05/test/">test</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/05/test/" class="archive-article-date">
+  	<time datetime="2020-02-05T12:07:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/05/test/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-使用typora写博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/05/%E4%BD%BF%E7%94%A8typora%E5%86%99%E5%8D%9A%E5%AE%A2/">使用typora写博客</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/05/%E4%BD%BF%E7%94%A8typora%E5%86%99%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
+  	<time datetime="2020-02-05T05:57:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>typora是比较牛逼的markdowm语法编辑器 可以直接预览语法效果看出</p>
+<p>但是插入图片需要注意使用绝对路径插入图片为此需要做出以下设置<img src="/images/image-20200205200907348.png" alt="image-20200205200907348"></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>搞了很久才搞好，相对路径使用老是有问题现在可以直接使用绝对路径。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">博客优化</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/05/%E4%BD%BF%E7%94%A8typora%E5%86%99%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-alfred自定义进阶操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/05/alfred%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BF%9B%E9%98%B6%E6%93%8D%E4%BD%9C/">alfred自定义进阶操作</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/05/alfred%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BF%9B%E9%98%B6%E6%93%8D%E4%BD%9C/" class="archive-article-date">
+  	<time datetime="2020-02-05T04:18:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="macOS下给应用管理员权限"><a href="#macOS下给应用管理员权限" class="headerlink" title="macOS下给应用管理员权限"></a>macOS下给应用管理员权限</h1><ol>
+<li><p>终端先输入 <code>sudo su</code>按回车 输入管理员密码 </p>
+</li>
+<li><p>访达中找到应用程序右击<img src="/var/root/Library/Application Support/typora-user-images/image-20200205130702884.png" alt="image-20200205130702884" style="zoom:30%;" /></p>
+</li>
+<li><p>打开macos文件夹</p>
+</li>
+<li><p>终端输入<code>sudo</code>将程序拖入终端按回车即可</p>
+</li>
+</ol>
+<img src="/var/root/Library/Application Support/typora-user-images/image-20200205131052029.png" alt="image-20200205131052029" style="zoom:33%;" />
+
+<p><a href="[https://zh.wikihow.com/%E5%9C%A8Mac%E7%94%B5%E8%84%91%E4%B8%8A%E4%BD%BF%E7%94%A8Root%E6%9D%83%E9%99%90%E6%89%93%E5%BC%80%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F](https://zh.wikihow.com/在Mac电脑上使用Root权限打开应用程序)">参考文献</a></p>
+<h1 id="alfred自定义快捷搜索"><a href="#alfred自定义快捷搜索" class="headerlink" title="alfred自定义快捷搜索"></a>alfred自定义快捷搜索</h1><img src="/var/root/Library/Application Support/typora-user-images/image-20200205131819312.png" alt="image-20200205131819312" style="zoom:50%;" />
+
+
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/05/alfred%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BF%9B%E9%98%B6%E6%93%8D%E4%BD%9C/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-202002022020和佘飘飘，左烨饭局杀" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/02/202002022020%E5%92%8C%E4%BD%98%E9%A3%98%E9%A3%98%EF%BC%8C%E5%B7%A6%E7%83%A8%E9%A5%AD%E5%B1%80%E6%9D%80/">202002022020和佘飘飘，左烨饭局杀</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/02/202002022020%E5%92%8C%E4%BD%98%E9%A3%98%E9%A3%98%EF%BC%8C%E5%B7%A6%E7%83%A8%E9%A5%AD%E5%B1%80%E6%9D%80/" class="archive-article-date">
+  	<time datetime="2020-02-02T15:06:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>左烨演的沈晓是凶手卧槽我还以为我是凶手哎 没有去深挖证据就是<br>主要是当时也怕自己会被发现好紧张果 哈哈哈<br>提醒她们是八点20结果没反应接着说了<br>希望自己能够坚持写博客吧 哈哈哈哈哈<br>明天开始学点东西吧 总得有个规划 假期这么长<br><img src="/images/1.png" alt=""><br><img src="/images/2.png" alt=""></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">特殊日子</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/02/202002022020%E5%92%8C%E4%BD%98%E9%A3%98%E9%A3%98%EF%BC%8C%E5%B7%A6%E7%83%A8%E9%A5%AD%E5%B1%80%E6%9D%80/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-日记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/01/%E6%97%A5%E8%AE%B0/">日记</a>
+    </h1>
+  
+
+        
+        <a href="/2020/02/01/%E6%97%A5%E8%AE%B0/" class="archive-article-date">
+  	<time datetime="2020-02-01T04:08:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="双黄连口服液可抑制新型冠状病毒"><a href="#双黄连口服液可抑制新型冠状病毒" class="headerlink" title="双黄连口服液可抑制新型冠状病毒"></a>双黄连口服液可抑制新型冠状病毒</h1><p>扯淡哈哈哈<br><img src="/images/shuanghuanglian.png" alt=""><br><a href="https://www.tmtpost.com/4240023.html" target="_blank" rel="noopener">参考文章</a><br>谈谈自己的经历 小鱼最先发布这个消息 然后淘宝已售空 去京东下了20盒10支每盒的后面几分钟就售空了 拼多多也几分钟没了<br>人民日报真是2020开年带货第一名哈哈哈 果然今早开始辟谣可能没啥用 又说对预防起不到效果 可真有点难顶 小鱼从来没有把这次肺炎看轻过但是我也应该更加理性的思考：我们是小城市邵东农村 疫情不算太严重，可能真就把疫情看得太重了 要相信国家 相信科研团队 武汉红十字会必死</p>
+<h1 id="林玉婷学姐遭遇比较悲惨但是很励志，值得俺向她学习"><a href="#林玉婷学姐遭遇比较悲惨但是很励志，值得俺向她学习" class="headerlink" title="林玉婷学姐遭遇比较悲惨但是很励志，值得俺向她学习"></a>林玉婷学姐遭遇比较悲惨但是很励志，值得俺向她学习</h1><p><img src="/images/31.png" alt=""><br>可能最值得感动的是尽管家里人反对她读书依然选择自己打工挣学费和生活费去读书吧 在教室睡3天的经历也太让人心疼了 以后有什么事尽量帮帮学姐 也多向学姐请教吧</p>
+<p>##反思<br>还是需要自己独立思考 发出来的消息得求证一下下 好吧<br>今天早起的时候咱们原生家庭的弊端就显示出来了吧 关键还是文化低 不懂新形势下怎么教育孩子吧 搞专制独裁一定是不行滴 反正就是接受早起的建议吧 俺已经习惯了 爷好难！！<br>明天早起8点先试试</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">新型肺炎</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">心情记录</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/02/01/%E6%97%A5%E8%AE%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-电子笔记进阶" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/31/%E7%94%B5%E5%AD%90%E7%AC%94%E8%AE%B0%E8%BF%9B%E9%98%B6/">电子笔记进阶</a>
+    </h1>
+  
+
+        
+        <a href="/2020/01/31/%E7%94%B5%E5%AD%90%E7%AC%94%E8%AE%B0%E8%BF%9B%E9%98%B6/" class="archive-article-date">
+  	<time datetime="2020-01-31T10:55:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>关于考点的笔记</p>
+<h1 id="清晰的配色-颜色就选up住推荐的几个吧"><a href="#清晰的配色-颜色就选up住推荐的几个吧" class="headerlink" title="清晰的配色 颜色就选up住推荐的几个吧"></a>清晰的配色 颜色就选up住推荐的几个吧</h1><p> 纸张绿色护眼 </p>
+<h1 id="章节标题荧光笔标绿"><a href="#章节标题荧光笔标绿" class="headerlink" title="章节标题荧光笔标绿"></a>章节标题荧光笔标绿</h1><h1 id="每节后面留一片区域用作框架"><a href="#每节后面留一片区域用作框架" class="headerlink" title="每节后面留一片区域用作框架"></a>每节后面留一片区域用作框架</h1><h1 id="每节后面写点反思总结多问自己"><a href="#每节后面写点反思总结多问自己" class="headerlink" title="每节后面写点反思总结多问自己"></a>每节后面写点反思总结多问自己</h1><h1 id="巧用搜素功能前提是字写好看点-标题"><a href="#巧用搜素功能前提是字写好看点-标题" class="headerlink" title="巧用搜素功能前提是字写好看点 标题"></a>巧用搜素功能前提是字写好看点 标题</h1>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/01/31/%E7%94%B5%E5%AD%90%E7%AC%94%E8%AE%B0%E8%BF%9B%E9%98%B6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-手帐学习笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -257,369 +1097,10 @@
 
 
   
-    <article id="post-markdown基本语法学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/28/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/">markdown基本语法学习</a>
-    </h1>
-  
-
-        
-        <a href="/2020/01/28/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2020-01-28T11:50:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="一级标题记得加空格"><a href="#一级标题记得加空格" class="headerlink" title="一级标题记得加空格"></a>一级标题记得加空格</h1><h1 id="字体-加粗-斜体-删除线"><a href="#字体-加粗-斜体-删除线" class="headerlink" title="字体 加粗 斜体 删除线"></a>字体 加粗 斜体 删除线</h1><p><strong>加粗</strong><br><em>斜体</em><br><strong><em>加粗倾斜</em></strong><br><del>删除线文本哈哈哈哈</del></p>
-<blockquote>
-<p>应用内容在此</p>
-<blockquote>
-<p>一直引用下去实属牛逼</p>
-</blockquote>
-</blockquote>
-<hr>
-<p><img src="/images/images.jpeg" alt="老婆" title="袁泉"></p>
-<p><a href="https://www.google.com/search?sxsrf=ACYBGNQ0r6gasmE89yJf5P4KaXUNW_9C1g%3A1580211862627&ei=lh4wXqrwJZXVmAXFn6zoDg&q=hexo%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87&oq=hexo%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87&gs_l=psy-ab.3...2442673.2451876..2452159...1.1..0.372.5418.0j19j5j4......0....1..gws-wiz.......0i71j0i67j0j33i160.qHxa1VpnaLM&ved=0ahUKEwiqk_f1m6bnAhWVKqYKHcUPC-0Q4dUDCAs&uact=5" target="_blank" rel="noopener">google</a></p>
-<ul>
-<li>列表内容</li>
-</ul>
-<ul>
-<li>列表内容</li>
-</ul>
-<ul>
-<li><p>列表牛逼</p>
-</li>
-<li><p><em>- 有序列表*</em></p>
-<ol>
-<li><p>注意空格</p>
-</li>
-<li><p>小心肺炎</p>
-<ul>
-<li>湖南100多例</li>
-<li>邵东11例</li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>手机</th>
-<th align="center">价格</th>
-<th align="right">性价比</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>iphone11pro max</td>
-<td align="center">10000</td>
-<td align="right">低</td>
-</tr>
-<tr>
-<td>iphone11</td>
-<td align="center">5000</td>
-<td align="right">中</td>
-</tr>
-<tr>
-<td>iphone xr</td>
-<td align="center">2000</td>
-<td align="right">高</td>
-</tr>
-<tr>
-<td>—</td>
-<td align="center"></td>
-<td align="right"></td>
-</tr>
-<tr>
-<td><code>![](/images/image.jpg)</code></td>
-<td align="center"></td>
-<td align="right"></td>
-</tr>
-</tbody></table>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">st&#x3D;&gt;start: 开始</span><br><span class="line">op&#x3D;&gt;operation: My Operation</span><br><span class="line">cond&#x3D;&gt;condition: Yes or No?</span><br><span class="line">e&#x3D;&gt;end</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br><span class="line">&amp;</span><br></pre></td></tr></table></figure>
-<h1 id="十-流程图"><a href="#十-流程图" class="headerlink" title="十.流程图"></a>十.流程图</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">st&#x3D;&gt;start: 开始</span><br><span class="line">op&#x3D;&gt;operation: My Operation</span><br><span class="line">cond&#x3D;&gt;condition: Yes or No?</span><br><span class="line">e&#x3D;&gt;end</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br><span class="line">&amp;</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">markdown</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/01/28/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%E5%AD%A6%E4%B9%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-post-name" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/28/post-name/">post_name</a>
-    </h1>
-  
-
-        
-        <a href="/2020/01/28/post-name/" class="archive-article-date">
-  	<time datetime="2020-01-27T16:34:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/01/28/post-name/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-我的第一篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第一篇博客</a>
-    </h1>
-  
-
-        
-        <a href="/2020/01/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-01-27T15:24:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="markdown语法"><a href="#markdown语法" class="headerlink" title="markdown语法"></a>markdown语法</h1><h2 id="斜体和粗体"><a href="#斜体和粗体" class="headerlink" title="斜体和粗体"></a>斜体和粗体</h2><p><em>这是斜体</em><br><strong>这首粗体</strong><br><strong><em>这首加粗斜体</em></strong></p>
-<h1 id="hexo插入图片方法"><a href="#hexo插入图片方法" class="headerlink" title="hexo插入图片方法"></a>hexo插入图片方法</h1><h2 id="使用相对路径引用资源，在-Web-世界中就是资源的-URL"><a href="#使用相对路径引用资源，在-Web-世界中就是资源的-URL" class="headerlink" title="使用相对路径引用资源，在 Web 世界中就是资源的 URL"></a>使用相对路径引用资源，在 Web 世界中就是资源的 URL</h2><p>修改_config.yml文件中的配置项post_asset_folder设为true，之后执行hexo new 命令后会生成 .md文件和一个文件夹用于存放照片</p>
-<p><img src="/images/example.png" alt=""><br>使用<img src="/example.png" alt="e">不知道会不会生成试一下哈</p>
-<p>好了 没事了 明天继续学习markdown语法写博客</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">hello</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">markdown</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/01/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/22/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2020/01/22/hello-world/" class="archive-article-date">
-  	<time datetime="2020-01-22T13:38:00.619Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/01/22/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+    </nav>
   
 
 
@@ -630,7 +1111,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 Steve Lannist
+    		&copy; 2020 codepig
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -713,6 +1194,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">日记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">特殊日子</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">hello</a>
               </li>
              
@@ -721,15 +1214,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">手帐</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">学习习惯</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">新型肺炎</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">心情记录</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">博客优化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">matlab</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">anki</a>
               </li>
             
             <div class="clearfix"></div>
